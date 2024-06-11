@@ -1,8 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
+//! Se importa para hacer peticiones HTTP
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
+import { SharedModule } from './shared/shared.module';
+import { GifsModule } from './gifs/gifs.module';
+
+
 
 @NgModule({
   declarations: [
@@ -10,7 +15,10 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GifsModule,
+    SharedModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
